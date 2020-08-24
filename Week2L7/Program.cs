@@ -7,17 +7,36 @@ namespace Week2L7
         static void Main(string[] args)
         {
             Zadanie_7();
-            Zadanie_6();
-            Zadanie_5();
-            Zadanie_4();
-            Zadanie_3();
-            Zadanie_2();
-            Zadanie_1();
+            //Zadanie_6();
+            //Zadanie_5();
+            //Zadanie_4();
+            //Zadanie_3();
+            //Zadanie_2();
+            //Zadanie_1();
         }
 
         public static void Zadanie_7()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Sprawdzamy, która z 3 liczb jest największa.");
+            Console.Write("Podaj pierwszą liczbę");
+            Int32.TryParse(Console.ReadLine(), out int firstNumber);
+            Console.Write("Podaj drugą liczbę");
+            Int32.TryParse(Console.ReadLine(), out int secondNumber);
+            Console.Write("Podaj trzecią liczbę");
+            Int32.TryParse(Console.ReadLine(), out int thirdNumber);
+
+            int maxNumber;
+            maxNumber = firstNumber;
+            if(secondNumber > maxNumber)
+            {
+                maxNumber = secondNumber;
+            }
+            if(thirdNumber > maxNumber)
+            {
+                maxNumber = thirdNumber;
+            }
+
+            Console.WriteLine($"Największa liczba to: {maxNumber}");
         }
 
         public static void Zadanie_6()
