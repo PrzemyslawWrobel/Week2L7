@@ -6,7 +6,8 @@ namespace Week2L7
     {
         static void Main(string[] args)
         {
-            Zadanie_7();
+            Zadanie_8();
+            //Zadanie_7();
             //Zadanie_6();
             //Zadanie_5();
             //Zadanie_4();
@@ -15,14 +16,44 @@ namespace Week2L7
             //Zadanie_1();
         }
 
+        public static void Zadanie_8()
+        {
+            Console.Write("Podaj temperature: ");
+            double c = Double.Parse(Console.ReadLine());
+            if (c < 0)
+            {
+                Console.WriteLine("cholernie piździ");
+            }
+            else if (c >= 0 && c < 10)
+            {
+                Console.WriteLine("zimno");
+            }
+            else if (c >= 10 && c < 20)
+            {
+                Console.WriteLine("chłodno");
+            }
+            else if (c >= 20 && c < 30)
+            {
+                Console.WriteLine("w sam raz");
+            }
+            else if (c >= 30 && c < 40)
+            {
+                Console.WriteLine("zaczyna byc słabo, bo gorąco");
+            }
+            else
+            {
+                Console.WriteLine("a weź wyprowadzam się na Alaskę.");
+            }
+        }
+
         public static void Zadanie_7()
         {
             Console.WriteLine("Sprawdzamy, która z 3 liczb jest największa.");
-            Console.Write("Podaj pierwszą liczbę");
+            Console.Write("Podaj pierwszą liczbę: ");
             Int32.TryParse(Console.ReadLine(), out int firstNumber);
-            Console.Write("Podaj drugą liczbę");
+            Console.Write("Podaj drugą liczbę: ");
             Int32.TryParse(Console.ReadLine(), out int secondNumber);
-            Console.Write("Podaj trzecią liczbę");
+            Console.Write("Podaj trzecią liczbę: ");
             Int32.TryParse(Console.ReadLine(), out int thirdNumber);
 
             int maxNumber;
