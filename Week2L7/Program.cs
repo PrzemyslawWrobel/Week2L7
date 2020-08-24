@@ -6,17 +6,77 @@ namespace Week2L7
     {
         static void Main(string[] args)
         {
-            Zadanie_1();
-            Zadanie_2();
-            Zadanie_3();
+            Zadanie_7();
+            Zadanie_6();
+            Zadanie_5();
             Zadanie_4();
-          
-
+            Zadanie_3();
+            Zadanie_2();
+            Zadanie_1();
         }
-        /// <summary>
-        /// 
-        /// </summary>
-        private static void Zadanie_4()
+
+        public static void Zadanie_7()
+        {
+            throw new NotImplementedException();
+        }
+
+        public static void Zadanie_6()
+        {
+            Console.WriteLine("Sprawdzamy co możesz robić z Twoim wzrostem");
+            Console.Write("Podaj swój wzrost:");
+
+             Double.TryParse(Console.ReadLine(), out double chosenHeight);
+
+
+            if (chosenHeight <= 150)
+            {
+                Console.WriteLine("Możesz zostać Czołgistą.\r\n");
+            }
+            else if (chosenHeight <= 150)
+            {
+                Console.WriteLine("Możesz zostać Marynażem w okecie podwodnym.");
+            }
+            else if (chosenHeight <= 176)
+            {
+                Console.WriteLine("Możesz zostać Marynażem");
+            }
+            else if (chosenHeight <= 181)
+            {
+                Console.WriteLine("Możesz dostać się do Kompanii Reprezentacyjnej i dreptać na defiladach");
+
+            }
+            else if (chosenHeight > 181)
+            {
+                Console.WriteLine("Będziesz obsrwatorem");
+            }
+        }
+
+        public static void Zadanie_5()
+        {
+            Console.WriteLine("Sprawdzamy czy możesz zostać (p) Osłem, senatorem, premierem lub prezydentem.");
+            Console.Write("Podaj swój wiek:");
+            
+           // Int32.TryParse(Console.ReadLine(), out int chosenAge);
+
+            if ((Int32.TryParse(Console.ReadLine(), out int chosenAge) == true) && chosenAge <= 0)
+            {
+                Console.WriteLine("Podaj poprawny wiek");
+            }
+            else
+            {
+                if (chosenAge >= 35)
+                    Console.WriteLine("Możesz zostać (p)Osłem, senatorem(i tak nic nie możesz), premierem(zdalnie sterowanym) lub prezydentem(możesz podpisywać wzystko albo nie).\r\n");
+                else if (chosenAge >= 30)
+                    Console.WriteLine("Możesz zostać (p)Osłem, senatorem(i tak nic nie możesz), premierem(zdalnie sterowanym).\r\n");
+                else if (chosenAge >= 21)
+                    Console.WriteLine("Możesz zostać (p)Osłem, premierem(zdalnie sterowanym).\r\n");
+                else
+                    Console.WriteLine("Masz jeszcze mleko pod nosem.\r\n");
+            }
+            
+        }
+
+        public static void Zadanie_4()
         {
             Console.WriteLine("Sprawdzamy czy rok jest przestępny");
             Console.WriteLine("Podaj rok do sprawdzenia: ");
@@ -36,7 +96,7 @@ namespace Week2L7
            
         }
 
-        private static void Zadanie_3()
+        public static void Zadanie_3()
         {
             Console.WriteLine("Sprawdzamy czy liczba jest dodatnia czy ujemna");
             Console.WriteLine("Podaj liczbę całkowitą: ");
@@ -60,7 +120,7 @@ namespace Week2L7
 
         }
 
-        private static void Zadanie_2()
+        public static void Zadanie_2()
         {
             Console.WriteLine("Sprawdzamy czy liczba jest parzysta");
             Console.WriteLine("Podaj liczbę całkowitą: ");
@@ -81,7 +141,7 @@ namespace Week2L7
 
         }
 
-        private static void Zadanie_1()
+        public static void Zadanie_1()
         {
             int a = 5;
             int b = 5;
