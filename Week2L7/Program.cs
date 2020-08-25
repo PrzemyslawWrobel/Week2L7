@@ -6,7 +6,11 @@ namespace Week2L7
     {
         static void Main(string[] args)
         {
-            Zadanie_8();
+            Zadanie_12();
+            //Zadanie_11();
+            //Zadanie_10();
+            //Zadanie_9();
+            //Zadanie_8();
             //Zadanie_7();
             //Zadanie_6();
             //Zadanie_5();
@@ -16,7 +20,65 @@ namespace Week2L7
             //Zadanie_1();
         }
 
-        public static void Zadanie_8()
+        private static void Zadanie_12()
+        {
+            throw new NotImplementedException();
+        }
+
+        private static void Zadanie_11()
+        {
+            int ocena;
+            Console.WriteLine("Zamieniamy ocenę z cyfry na napis");
+            Console.WriteLine("Podaj ocene od 1 do 6:");
+            Int32.TryParse(Console.ReadLine(), out ocena);
+            switch (ocena)
+            {
+                case 1:
+                    Console.WriteLine("Niedostateczny");
+                    break;
+                case 2:
+                    Console.WriteLine("Dopuszczający");
+                    break;
+                case 3:
+                    Console.WriteLine("Dostateczny");
+                    break;
+                case 4:
+                    Console.WriteLine("Dobry");
+                    break;
+                case 5:
+                    Console.WriteLine("Bardzo dobry");
+                    break;
+                case 6:
+                    Console.WriteLine("Celujacy");
+                    break;
+                default:
+                    Console.WriteLine("Podałeś liczbę spoza zakresu ocen");
+                    break;
+            }
+        }
+
+        private static void Zadanie_10()
+        {
+            int a, b, c;
+            Console.WriteLine("Sprawdzamy czy boki - A, B, C mog utworzyć trójkat");
+            Console.Write("Podaj bok A: ");
+            Int32.TryParse(Console.ReadLine(), out a);
+            Console.Write("Podaj bok B: ");
+            Int32.TryParse(Console.ReadLine(), out b);
+            Console.Write("Podaj bok C: ");
+            Int32.TryParse(Console.ReadLine(), out c);
+
+            if (a < b + c || b < a + c || c < a + b)
+            {
+                Console.WriteLine("Możesz stworzyć trójkąt");
+            }
+            else
+            {
+                Console.WriteLine("Nie możesz stworzyć trójkąta.");
+            }
+        }
+
+        public static void Zadanie_9()
         {
             Console.Write("Podaj temperature: ");
             double c = Double.Parse(Console.ReadLine());
@@ -44,6 +106,41 @@ namespace Week2L7
             {
                 Console.WriteLine("a weź wyprowadzam się na Alaskę.");
             }
+        }
+
+        public static void Zadanie_8()
+        {
+            Console.WriteLine("Sprawdzamy czy kandydat dostanie się na studia.");
+            Console.Write("Podaj wynik matury z matematyki: ");
+            Int32.TryParse(Console.ReadLine(), out int matematyka);
+            Console.Write("Podaj wynik matury z fizyki: ");
+            Int32.TryParse(Console.ReadLine(), out int fizyka);
+            Console.Write("Podaj wynik matury z chemii:  ");
+            Int32.TryParse(Console.ReadLine(), out int chemia);
+            int suma = matematyka + chemia + fizyka;
+
+            if(matematyka > 70 && fizyka > 55 && chemia > 45 && suma > 180)
+            {
+                Console.WriteLine("Kandydat dopuszczony do rekrutacji");
+            }
+            else
+            {
+                if ((matematyka+fizyka) >150)
+                {
+                    Console.WriteLine("Kandydat dopuszczony do rekrutacji");
+                } 
+                else if ((matematyka + chemia) > 150)
+                {
+                    Console.WriteLine("Kandydat dopuszczony do rekrutacji");
+                }
+                else
+                {
+                    {
+                        Console.WriteLine("Kandydat nie jest dopuszczony do rekrutacji");
+                    }
+                }
+            }
+
         }
 
         public static void Zadanie_7()
