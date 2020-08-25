@@ -6,7 +6,8 @@ namespace Week2L7
     {
         static void Main(string[] args)
         {
-            Zadanie_12();
+            Zadanie_13();
+            //Zadanie_12();
             //Zadanie_11();
             //Zadanie_10();
             //Zadanie_9();
@@ -20,9 +21,70 @@ namespace Week2L7
             //Zadanie_1();
         }
 
+        private static void Zadanie_13()
+        {
+            Console.Write("Podaj pierwszą liczbę: ");
+            int a = Int32.Parse(Console.ReadLine());
+            Console.Write("Podaj drug liczbę: ");
+            int b = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Dostępne operacje na liczbach:");
+            Console.WriteLine("1. Dodawanie ");
+            Console.WriteLine("2. Substract ");
+            Console.WriteLine("3. Mnożenie ");
+            Console.WriteLine("4. Dzielenie ");
+            Console.WriteLine("Co chcesz zrobić z liczbami, podaj cyfrę cyfrę: ");
+            int operation = Int32.Parse(Console.ReadLine());
+            var result = 0;
+
+            switch (operation)
+            {
+                case 1:
+                    result = a + b;
+                    Console.WriteLine("Wynik działania: " + result);
+                    break;
+                case 2:
+                    result = a - b;
+                    Console.WriteLine("Wynik działania: " + result);
+                    break;
+                case 3:
+                    result = a * b;
+                    Console.WriteLine("Wynik działania: " + result);
+                    break;
+                case 4:
+                    if (b == 0)
+                    {
+                        Console.WriteLine("Pamiętaj cholero nigdy nie dziel przez zero.");
+                        break;
+                    }
+                    else
+                    {
+                        result = a / b;
+                        Console.WriteLine("Wynik działania: " + result);
+                        break;
+                    }
+                default:
+                    Console.WriteLine("Nie ma takiego działania");
+                    break;
+            }
+        }
+
         private static void Zadanie_12()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Podaj dzień tygodnia od 1 do 7");
+            int weekDay;
+            Int32.TryParse(Console.ReadLine(), out weekDay);
+
+            var output = weekDay switch
+            {
+                1 => "Monday",
+                2 => "Tuesday",
+                3 => "Wednesday",
+                4 => "Thrusday",
+                5 => "Friday",
+                6 => "Saturday",
+                7 => "Sunday",
+            };
+            Console.WriteLine(output);
         }
 
         private static void Zadanie_11()
